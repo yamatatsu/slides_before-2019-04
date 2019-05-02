@@ -1,0 +1,8 @@
+[[redirects]]
+  from = "/typescript/:page"
+  to = "/typescript/index.html"
+  status = 200
+[[redirects]]
+  from = "/cdk/:page"
+  to = "https://2019-05-01-cdk.netlify.com/:page"
+  status = 200

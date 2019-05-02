@@ -1,0 +1,216 @@
+import { Head, Image } from 'mdx-deck'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Container, Row, Col } from 'react-grid-system'
+import Top from '../../components/Top.js'
+import SandBox from './components/SandBox'
+import packageJson from './package.json'
+
+export { default as theme } from '../../theme'
+
+<Top
+  title="Pipeline Operator Sandbox"
+  image="https://i.gyazo.com/1a93c1f91e97a782243f5c4f06bf16e0.png"
+  eventName="#WeJS @24th"
+  urlPath={packageJson.urlPath}
+/>
+
+---
+# 自己紹介
+---
+<img src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png" width="275"/>
+
+- CureApp
+- アプリで医療機器を作ってる
+- RN, react, Node.js, MongoDB
+
+---
+# TL;DR
+---
+# pipeline operator ☺ ️
+---
+# pipeline operator is 何 ??
+---
+# |>
+---
+僕「babelでpipeline operator使えるようになったらしい。使ってみよー」
+---
+<img src="https://i.gyazo.com/4e01b705fcc27cda558cf00a7ca98366.png" width="1440"/>
+---
+<img src="https://i.gyazo.com/aced314e590318a584ffc0525d3ed4b4.png" width="700"/>
+---
+<img src="https://i.gyazo.com/468349bbe821f898b01a8f5ecdc03c6c.png" width="800"/>
+---
+# 未対応
+---
+# 作ろう！！！
+---
+### sandbox
+<SandBox
+  initial={`
+({
+  first:'pipe',
+  second:'line',
+  third:'!!!',
+})
+  |> Object.values
+  |> (a => a.join(''))
+  |> alert`}
+/>
+
+---
+### [Proposed Solutions](https://babeljs.io/blog/2018/07/19/whats-happening-with-the-pipeline-proposal#proposed-solutions)
+
+- Minimal (さっきの)
+- F#-Style (Coming Soon!)
+- Smart (Coming Soon!)
+
+---
+### fsharp
+<div>
+  <p style={{ fontSize: 20 }}>(動かない。。。)</p>
+  <SandBox
+    initial={`
+Promise.resolve({
+  first:'pipe',
+  second:'line',
+  third:'!!!',
+})
+  |> await         // <-
+  |> Object.values
+  |> (a => a.join(''))
+  |> alert`}
+  />
+</div>
+
+---
+### smart
+<div>
+  <p style={{ fontSize: 20 }}>(動かない。。。)</p>
+  <SandBox
+    initial={`
+({
+  first:'pipe',
+  second:'line',
+  third:'!!!',
+})
+  |> await #       // <-
+  |> Object.values
+  |> #.join('')    // <- 元: (a => a.join(''))
+  |> alert`}
+  />
+</div>
+
+---
+mapしてみる
+---
+### map
+<SandBox
+  initial={`
+[1, 2, 3]
+  |> (a => a.map(n => n * 2))
+  |> JSON.stringify
+  |> alert`}
+/>
+
+---
+### R.map
+<SandBox
+  initial={`
+const { map } = R;
+[1, 2, 3]
+  |> map(n => n * 2) // <-
+  |> JSON.stringify
+  |> alert`}
+/>
+
+```notes
+またいつか使いたい
+<CodeSurfer
+  title='OOP と FP'
+  code={require("!raw-loader!./assets/codes/oop_vs_fp.js")}
+  showNumbers
+  steps={[
+    { ranges: [[1,11]], notes: 'OOPだとこう？' },
+    { ranges: [[14,22]], notes: 'FPだとこう？' },
+    { ranges: [[1,11]], notes: 'OOP' },
+    { range: [2,8], notes: 'class定義して' },
+    { lines: [10], notes: 'インスタンス作って' },
+    { lines: [11], notes: '使う' },
+    { ranges: [[14,22]], notes: 'FP' },
+    { ranges: [[15,19]], notes: '型と関数を定義して' },
+    { lines: [21], notes: 'オブジェクト作って' },
+    { lines: [22], notes: '使う' },
+    { lines: [11,22], notes: '使い心地' },
+    { ranges: [[15,21]], notes: '構造的部分型' },
+  ]}
+/>
+```
+
+---
+# [Ramda](https://ramdajs.com/)
+
+---
+##### (タイポじゃないよ。。。)
+
+---
+<img src="https://i.gyazo.com/0fb75025d51989473b6823fd31da7906.png" width="207"/>
+
+---
+lodashみたいなもの
+---
+- Immutability and side-effect free
+- automatically curried
+- convenience for currying
+
+---
+### ramda map
+<SandBox initial={require("!raw-loader!./assets/codes/ramda_map.js")} />
+
+---
+### ramda map (curry)
+<SandBox initial={require("!raw-loader!./assets/codes/ramda_map-curry.js")} />
+
+---
+### ramda lens
+<SandBox initial={require("!raw-loader!./assets/codes/ramda_lens.js")} />
+
+---
+### ramda groupBy
+<SandBox initial={require("!raw-loader!./assets/codes/ramda_groupBy.js")} />
+
+---
+### ramda sort
+<SandBox initial={require("!raw-loader!./assets/codes/ramda_sort.js")} />
+
+---
+### ramda tap
+<SandBox initial={require("!raw-loader!./assets/codes/ramda_tap.js")} />
+
+---
+pipe, pipeP, compose, composeP, curry, R.__, cond, evolve, groupBy, juxt, lens, view, set, over, lensIndex, lensProp, lensPath, lift, mapObjIndexed, of, objOf, partial, pathSatisfies, range, scan, times, when, ...
+
+---
+# Ramda ☺ ️
+
+---
+ご清聴ありがとうございました！！
+
+---
+### sandbox(pipeline, optional-chaining)
+<Container>
+  <Row>
+    <Col sm={12} md={8}>
+      <SandBox
+        initial={`// type your code...
+// _  < 'lodash'
+// fp < 'lodash/fp'
+// R  < 'ramda'`}
+      />
+    </Col>
+    <Col sm={12} md={4}>
+      <p><a href='https://lodash.com/docs/4.17.10'>lodash docs</a></p>
+      <p><a href='https://github.com/lodash/lodash/tree/4.17.10-npm/fp'>lodash fp</a></p>
+      <p><a href='https://ramdajs.com/docs/'>ramda docs</a></p>
+    </Col>
+  </Row>
+</Container>

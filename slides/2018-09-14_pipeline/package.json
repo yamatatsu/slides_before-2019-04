@@ -1,0 +1,37 @@
+{
+  "name": "2018-09-14_pipeline",
+  "urlPath": "pipeline-operator",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build --no-html -d ../../dist/pipeline-operator deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck",
+    "play": "node play.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/parser": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.10.1",
+    "@types/ramda": "^0.25.38",
+    "brace": "^0.11.1",
+    "lodash": "^4.17.11",
+    "mdx-deck": "1.x.x",
+    "mdx-deck-code-surfer": "0.x.x",
+    "ramda": "^0.25.0",
+    "raw-loader": "^0.5.1",
+    "react": "^16.5.1",
+    "react-ace": "^6.1.4",
+    "react-dom": "^16.5.1",
+    "react-grid-system": "^4.3.1",
+    "react-powerplug": "^1.0.0-rc.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}

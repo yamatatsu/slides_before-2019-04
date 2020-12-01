@@ -1,5 +1,5 @@
 import { Head, Image } from 'mdx-deck'
-import { CodeSurfer } from "mdx-deck-code-surfer"
+import { CodeSurfer } from 'code-surfer'
 import { Container, Row, Col } from 'react-grid-system'
 import Top from '../../components/Top.js'
 import SandBox from './components/SandBox'
@@ -15,36 +15,64 @@ export { default as theme } from '../../theme'
 />
 
 ---
+
 # 自己紹介
+
 ---
-<img src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png" width="275"/>
+
+<img
+  src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png"
+  width="275"
+/>
 
 - CureApp
 - アプリで医療機器を作ってる
 - RN, react, Node.js, MongoDB
 
 ---
+
 # TL;DR
+
 ---
-# pipeline operator ☺ ️
+
+# pipeline operator 😃 ️
+
 ---
+
 # pipeline operator is 何 ??
+
 ---
+
 # |>
+
 ---
-僕「babelでpipeline operator使えるようになったらしい。使ってみよー」
+
+## 僕「babel で pipeline operator 使えるようになったらしい。使ってみよー」
+
 ---
-<img src="https://i.gyazo.com/4e01b705fcc27cda558cf00a7ca98366.png" width="1440"/>
+
+## <img src="https://i.gyazo.com/4e01b705fcc27cda558cf00a7ca98366.png" width="1440"/>
+
 ---
-<img src="https://i.gyazo.com/aced314e590318a584ffc0525d3ed4b4.png" width="700"/>
+
+## <img src="https://i.gyazo.com/aced314e590318a584ffc0525d3ed4b4.png" width="700"/>
+
 ---
-<img src="https://i.gyazo.com/468349bbe821f898b01a8f5ecdc03c6c.png" width="800"/>
+
+## <img src="https://i.gyazo.com/468349bbe821f898b01a8f5ecdc03c6c.png" width="800"/>
+
 ---
+
 # 未対応
+
 ---
+
 # 作ろう！！！
+
 ---
+
 ### sandbox
+
 <SandBox
   initial={`
 ({
@@ -58,6 +86,7 @@ export { default as theme } from '../../theme'
 />
 
 ---
+
 ### [Proposed Solutions](https://babeljs.io/blog/2018/07/19/whats-happening-with-the-pipeline-proposal#proposed-solutions)
 
 - Minimal (さっきの)
@@ -65,7 +94,9 @@ export { default as theme } from '../../theme'
 - Smart (Coming Soon!)
 
 ---
+
 ### fsharp
+
 <div>
   <p style={{ fontSize: 20 }}>(動かない。。。)</p>
   <SandBox
@@ -83,7 +114,9 @@ Promise.resolve({
 </div>
 
 ---
+
 ### smart
+
 <div>
   <p style={{ fontSize: 20 }}>(動かない。。。)</p>
   <SandBox
@@ -101,9 +134,13 @@ Promise.resolve({
 </div>
 
 ---
-mapしてみる
+
+## map してみる
+
 ---
+
 ### map
+
 <SandBox
   initial={`
 [1, 2, 3]
@@ -113,7 +150,9 @@ mapしてみる
 />
 
 ---
+
 ### R.map
+
 <SandBox
   initial={`
 const { map } = R;
@@ -123,7 +162,7 @@ const { map } = R;
   |> alert`}
 />
 
-```notes
+<!-- ```notes
 またいつか使いたい
 <CodeSurfer
   title='OOP と FP'
@@ -143,60 +182,84 @@ const { map } = R;
     { lines: [11,22], notes: '使い心地' },
     { ranges: [[15,21]], notes: '構造的部分型' },
   ]}
-/>
 ```
+/> -->
 
 ---
+
 # [Ramda](https://ramdajs.com/)
 
 ---
+
 ##### (タイポじゃないよ。。。)
 
 ---
-<img src="https://i.gyazo.com/0fb75025d51989473b6823fd31da7906.png" width="207"/>
+
+<img
+  src="https://i.gyazo.com/0fb75025d51989473b6823fd31da7906.png"
+  width="207"
+/>
 
 ---
-lodashみたいなもの
----
+
+## lodash みたいなもの
+
 - Immutability and side-effect free
 - automatically curried
 - convenience for currying
 
 ---
+
 ### ramda map
-<SandBox initial={require("!raw-loader!./assets/codes/ramda_map.js")} />
+
+<SandBox initial={require('!raw-loader!./assets/codes/ramda_map.js')} />
 
 ---
+
 ### ramda map (curry)
-<SandBox initial={require("!raw-loader!./assets/codes/ramda_map-curry.js")} />
+
+<SandBox initial={require('!raw-loader!./assets/codes/ramda_map-curry.js')} />
 
 ---
+
 ### ramda lens
-<SandBox initial={require("!raw-loader!./assets/codes/ramda_lens.js")} />
+
+<SandBox initial={require('!raw-loader!./assets/codes/ramda_lens.js')} />
 
 ---
+
 ### ramda groupBy
-<SandBox initial={require("!raw-loader!./assets/codes/ramda_groupBy.js")} />
+
+<SandBox initial={require('!raw-loader!./assets/codes/ramda_groupBy.js')} />
 
 ---
+
 ### ramda sort
-<SandBox initial={require("!raw-loader!./assets/codes/ramda_sort.js")} />
+
+<SandBox initial={require('!raw-loader!./assets/codes/ramda_sort.js')} />
 
 ---
+
 ### ramda tap
-<SandBox initial={require("!raw-loader!./assets/codes/ramda_tap.js")} />
+
+<SandBox initial={require('!raw-loader!./assets/codes/ramda_tap.js')} />
 
 ---
-pipe, pipeP, compose, composeP, curry, R.__, cond, evolve, groupBy, juxt, lens, view, set, over, lensIndex, lensProp, lensPath, lift, mapObjIndexed, of, objOf, partial, pathSatisfies, range, scan, times, when, ...
+
+pipe, pipeP, compose, composeP, curry, R.\_\_, cond, evolve, groupBy, juxt, lens, view, set, over, lensIndex, lensProp, lensPath, lift, mapObjIndexed, of, objOf, partial, pathSatisfies, range, scan, times, when, ...
 
 ---
-# Ramda ☺ ️
+
+# Ramda 😃 ️
 
 ---
+
 ご清聴ありがとうございました！！
 
 ---
+
 ### sandbox(pipeline, optional-chaining)
+
 <Container>
   <Row>
     <Col sm={12} md={8}>
@@ -208,9 +271,17 @@ pipe, pipeP, compose, composeP, curry, R.__, cond, evolve, groupBy, juxt, lens, 
       />
     </Col>
     <Col sm={12} md={4}>
-      <p><a href='https://lodash.com/docs/4.17.10'>lodash docs</a></p>
-      <p><a href='https://github.com/lodash/lodash/tree/4.17.10-npm/fp'>lodash fp</a></p>
-      <p><a href='https://ramdajs.com/docs/'>ramda docs</a></p>
+      <p>
+        <a href="https://lodash.com/docs/4.17.10">lodash docs</a>
+      </p>
+      <p>
+        <a href="https://github.com/lodash/lodash/tree/4.17.10-npm/fp">
+          lodash fp
+        </a>
+      </p>
+      <p>
+        <a href="https://ramdajs.com/docs/">ramda docs</a>
+      </p>
     </Col>
   </Row>
 </Container>

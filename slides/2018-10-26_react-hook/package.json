@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build --no-html -d ../../dist/react-hook deck.mdx",
+    "build": "mdx-deck build --no-html -d ../../dist/react-hook --basepath=/react-hook deck.mdx",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
     "help": "mdx-deck",
@@ -28,8 +28,10 @@
     "immutable": "^3.8.2",
     "json-stringify-pretty-compact": "^1.2.0",
     "lodash": "^4.17.11",
-    "mdx-deck": "yamatatsu/mdx-deck#localized",
-    "mdx-deck-code-surfer": "0.5.3",
+    "file-loader": "^3.0.1",
+    "json-loader": "^0.5.7",
+    "mdx-deck": "2.x.x",
+    "mdx-deck-code-surfer": "^0.5.3",
     "mori": "^0.3.2",
     "power-assign": "^0.2.10",
     "prop-types": "^15.6.2",
@@ -46,5 +48,7 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-spinners": "0.5.x"
+  }
 }

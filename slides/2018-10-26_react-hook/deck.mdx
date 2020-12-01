@@ -15,153 +15,277 @@ export { default as theme } from '../../theme'
 />
 
 ---
+
 # 自己紹介
+
 ---
-<img src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png" width="275"/>
+
+<img
+  src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png"
+  width="275"
+/>
 
 - CureApp
 - アプリで医療機器を作ってる
 - react, react native, electron, Node.js, MongoDB
 
 ---
+
 # 話すこと
+
 ---
+
 - React Hooks とは
 - 遊んでみる
-- didMountしてみたい(やめとけ)
+- didMount してみたい(やめとけ)
+
 ---
+
 はじめます
+
 ---
-タイムラインがReact Hooksで騒がしい
+
+タイムラインが React Hooks で騒がしい
+
 ---
+
 React Hooks とは？
+
 ---
+
 <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank"><img src="https://i.gyazo.com/acb0d1a6cc21a52351606359e111d843.png" alt="Image from Gyazo" width="937"/></a>
+
 ---
+
 三行で
-* Functional Componentで状態を持てる
-* Functional Componentでupdate系のイベントを扱える
-* Consumer無しでContextを使える
-とかとか
+
+- Functional Component で状態を持てる
+- Functional Component で update 系のイベントを扱える
+- Consumer 無しで Context を使える
+  とかとか
+
 ---
+
 遊んでみよう
+
 ---
-editorの中で一通りのuseHogeとか使えるようになってます。
+
+editor の中で一通りの useHoge とか使えるようになってます。
 
 まだ触ったことない方は遊んでいってみて下さい。
----
-useState
----
-<SandBox initial={require('!raw-loader!./assets/codes/01_useState.js')} />
----
-まとめ
-* functional componentに状態持てる
----
-useEffect
----
-<SandBox initial={require('!raw-loader!./assets/codes/02_useEffect.js')} />
----
-(たぶん)よくある使い方
----
-<SandBox initial={require('!raw-loader!./assets/codes/02_useEffect2.js')} />
----
-感想
-* fire storeのobserveとかしたい
-* ねずみ算は怖い
----
-useContext
----
-<SandBox initial={require('!raw-loader!./assets/codes/03_useContext.js')} />
----
-まとめ
-* Consumerいらなくなる
----
-useReducer
----
-まとめ
-* reducerっぽく使えるuseState
----
-useCallback
----
-<SandBox initial={require('!raw-loader!./assets/codes/04_useCallback.js')} />
----
-でもこのケース実はuseCallbackいらない
----
-<SandBox initial={require('!raw-loader!./assets/codes/05_useCallback2.js')} />
----
-まとめ
-* 一回だけ走ってほしいやつ
----
-useMemo
----
-まとめ
-* useCallbackに似てる
-* 関数の戻り値をくれる
-* reselectっぽい
-* memoizeしてくれる
----
-useRef
----
-<SandBox initial={require('!raw-loader!./assets/codes/06_useRef.js')} />
----
-まとめ
-* refとれる
----
-useImperativeMethods
----
-<SandBox initial={require('!raw-loader!./assets/codes/07_useImperativeMethods.js')} />
----
-まとめ
-* refをつくる
----
-useMutationEffect
----
-# 🙇‍
----
-useLayoutEffect
----
-# 🙇‍
----
-didMountっぽいことしてみたい
 
-ページ表示でワンタイムにfetchがしたい
 ---
+
+useState
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/01_useState.js')} />
+
+---
+
+まとめ
+
+- functional component に状態持てる
+
+---
+
+useEffect
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/02_useEffect.js')} />
+
+---
+
+(たぶん)よくある使い方
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/02_useEffect2.js')} />
+
+---
+
+感想
+
+- fire store の observe とかしたい
+- ねずみ算は怖い
+
+---
+
+useContext
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/03_useContext.js')} />
+
+---
+
+まとめ
+
+- Consumer いらなくなる
+
+---
+
+useReducer
+
+---
+
+まとめ
+
+- reducer っぽく使える useState
+
+---
+
+useCallback
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/04_useCallback.js')} />
+
+---
+
+でもこのケース実は useCallback いらない
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/05_useCallback2.js')} />
+
+---
+
+まとめ
+
+- 一回だけ走ってほしいやつ
+
+---
+
+useMemo
+
+---
+
+まとめ
+
+- useCallback に似てる
+- 関数の戻り値をくれる
+- reselect っぽい
+- memoize してくれる
+
+---
+
+useRef
+
+---
+
+<SandBox initial={require('!raw-loader!./assets/codes/06_useRef.js')} />
+
+---
+
+まとめ
+
+- ref とれる
+
+---
+
+useImperativeMethods
+
+---
+
+<SandBox
+  initial={require('!raw-loader!./assets/codes/07_useImperativeMethods.js')}
+/>
+
+---
+
+まとめ
+
+- ref をつくる
+
+---
+
+useMutationEffect
+
+---
+
+# 🙇‍
+
+---
+
+useLayoutEffect
+
+---
+
+# 🙇‍
+
+---
+
+didMount っぽいことしてみたい
+
+ページ表示でワンタイムに fetch がしたい
+
+---
+
 <a href="https://twitter.com/tylermcginnis/status/1056965558384582662" target="_blank"><img src="https://i.gyazo.com/ce237732d601e8e096e4828f10912ff1.png" alt="Image from Gyazo" width="617"/></a>
+
 ---
+
 <a href="https://twitter.com/tylermcginnis/status/1056965558384582662" target="_blank"><img src="https://i.gyazo.com/b3d3c8f797d9b679cfe3dce1d027190d.png" alt="Image from Gyazo" width="700"/></a>
+
 ---
+
 <a href="https://twitter.com/dan_abramov/status/1057011444796084224" target="_blank"><img src="https://i.gyazo.com/7a492729ae77d40f1a6bd2656cffbcc8.png" alt="Image from Gyazo" width="612"/></a>
+
 ---
+
 <a href="https://twitter.com/dan_abramov/status/1057011888335347713" target="_blank"><img src="https://i.gyazo.com/19fbaea45674ba423733f8375de72665.png" alt="Image from Gyazo" width="620"/></a>
+
 ---
-# Suspenseを待たれよ
+
+# Suspense を待たれよ
+
 ---
+
 おわり。
+
 ---
+
 おまけ
+
 ---
-おまけ1
+
+おまけ 1
 
 https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889
+
 ---
-おまけ2
+
+おまけ 2
 
 https://gist.github.com/mizchi/b7346bf448eb826a02e2176800ab40a5
+
 ---
-おまけ3
+
+おまけ 3
 
 https://qiita.com/mizchi/items/89f2ec05f909a8d8dbbe
+
 ---
-おまけ4
+
+おまけ 4
 
 https://github.com/koba04/react-suspense-demo
+
 ---
-おまけ5
+
+おまけ 5
 
 https://nikgraf.github.io/react-hooks/
+
 ---
-おまけ6
+
+おまけ 6
 
 https://qiita.com/advent-calendar/2018/react-hooks-ogiri
+
 ---
+
 ご清聴ありがとうございました！！

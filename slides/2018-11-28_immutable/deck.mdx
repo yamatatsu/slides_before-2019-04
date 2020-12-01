@@ -1,5 +1,5 @@
 import { Head, Image } from 'mdx-deck'
-import { CodeSurfer } from "mdx-deck-code-surfer"
+import { CodeSurfer } from 'code-surfer'
 import { Container, Row, Col } from 'react-grid-system'
 import Top from '../../components/Top.js'
 import ExLink from '../../components/ExLink.js'
@@ -17,27 +17,39 @@ export { default as theme } from '../../theme'
 />
 
 ---
+
 # 自己紹介
+
 ---
-<img src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png" width="275"/>
+
+<img
+  src="https://i.gyazo.com/87d23d84bc93c83bb165c9d2f239f703.png"
+  width="275"
+/>
 
 - CureApp
 - アプリで医療機器を作ってる
 - react, react native, electron, Node.js, MongoDB
 
 ---
+
 # 話すこと
+
 ---
+
 - Immutable
 - seamless-immutable
 - Immer
 - mori
 - lens (ramda)
 - sp2
+
 ---
-はじめます
----
-### vanillaの例
+
+## はじめます
+
+### vanilla の例
+
 <SandBox
   doc="https://facebook.github.io/immutable-js/docs/"
   initial={`const data = {
@@ -57,13 +69,20 @@ newData`}
 />
 
 ---
+
 # Immutable
+
 ---
+
 ### Immutable
+
 言わずと知れた
 https://redux.js.org/recipes/usingimmutablejs
+
 ---
+
 ### Immutable
+
 <SandBox
   doc="https://facebook.github.io/immutable-js/docs/"
   initial={`const data = {
@@ -87,9 +106,13 @@ I.fromJS(data)
 />
 
 ---
+
 # seamless-immutable
+
 ---
+
 ### seamless-immutable
+
 <SandBox
   doc="https://github.com/rtfeldman/seamless-immutable#seamless-immutable"
   initial={`const data = {
@@ -114,9 +137,13 @@ SI.from(data)
 />
 
 ---
+
 # Immer
+
 ---
+
 ### Immer
+
 <SandBox
   doc="https://github.com/mweststrate/immer#immer"
   initial={`const data = {
@@ -136,15 +163,23 @@ newData
 />
 
 ---
+
 # mori
+
 ---
+
 ### mori
+
 省略
 
 ---
+
 # lens (ramda)
+
 ---
+
 ### lens (ramda)
+
 <SandBox
   doc="https://ramdajs.com/docs/#lens"
   initial={`const data = {
@@ -162,9 +197,13 @@ append(data)`}
 />
 
 ---
+
 # sp2
+
 ---
+
 ### sp2
+
 <SandBox
   doc="https://github.com/phenyl-js/sp2"
   initial={`const data = {
@@ -192,48 +231,74 @@ update(data, {
 />
 
 ---
+
 ### sp2 のつづき
 
 ---
-sp2 とは
+
+## sp2 とは
+
 ---
-<ExLink href="http://sekatsu-kagaku.sub.jp/hybridized-orbital.htm">sp2混成軌道(sp2 hybrid orbital)</ExLink>
----
+
+## <ExLink href="http://sekatsu-kagaku.sub.jp/hybridized-orbital.htm">sp2 混成軌道(sp2 hybrid orbital)</ExLink>
+
 [フェニル基](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A7%E3%83%8B%E3%83%AB%E5%9F%BA)
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Phenyl-group.png" width='500'/>
+
 ---
+
+## <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Phenyl-group.png" width='500'/>
+
+---
+
 真面目な意味もある
 
 ---
+
 State-operating Procedures with Portability
 
 ---
+
 変更をただの json として表現できる
 
 ---
+
 [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 
-<q>Pass action objects over the network<br/>  to implement collaborative environments<br/>  without dramatic changes to how the code is written.</q>
+<q>Pass action objects over the network<br/> to implement collaborative environments<br/> without dramatic changes to how the code is written.</q>
 
 ---
-「clientで変更した内容をサーバーに同期」
+
+「client で変更した内容をサーバーに同期」
 
 とかできる
 
 ---
+
 ## [phenyl](https://github.com/phenyl-js/phenyl)
+
 ---
-JavaScript Server/Client framework to SSoE (State Synchronization over Environments)
+
+## JavaScript Server/Client framework to SSoE (State Synchronization over Environments)
+
+- user データが主体のアプリ向けです
+- EC とかマッチングとかには向いてないよ
+
 ---
-- userデータが主体のアプリ向けです
-- ECとかマッチングとかには向いてないよ
+
+## 例えば、患者のデータが患者アプリからしか変わらなくて、医者が変更するデータが分離されてる治療アプリとか。
+
 ---
-例えば、患者のデータが患者アプリからしか変わらなくて、医者が変更するデータが分離されてる治療アプリとか。
+
+## ![](https://cureapp.co.jp/img/company/company-logo.png)
+
 ---
-![](https://cureapp.co.jp/img/company/company-logo.png)
+
+## 宣伝でした。
+
 ---
-宣伝でした。
+
+## おわり。
+
 ---
-おわり。
----
+
 ご清聴ありがとうございました！！

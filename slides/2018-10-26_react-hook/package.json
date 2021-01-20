@@ -24,7 +24,7 @@
     "@types/node": "^10.12.1",
     "@types/ramda": "^0.25.40",
     "brace": "^0.11.1",
-    "immer": "^1.7.4",
+    "immer": "^8.0.1",
     "immutable": "^3.8.2",
     "json-stringify-pretty-compact": "^1.2.0",
     "lodash": "^4.17.11",

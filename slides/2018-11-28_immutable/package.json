@@ -28,7 +28,7 @@
     "immutable": "^3.8.2",
     "json-loader": "^0.5.7",
     "json-stringify-pretty-compact": "^1.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mdx-deck": "2.x.x",
     "mori": "^0.3.2",
     "power-assign": "^0.2.9",
